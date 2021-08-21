@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="ru">
+ 
+<head>
+  <meta charset="UTF-8" />
+  <title>Опросник</title>
+   
+  <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+ 
+        *, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box;}
+        body {background: #2F2556; color: #B9B5C7; font: 14px 'Open Sans', sans-serif;}
+ 
+        .top { padding-right: 20px; background: #261F41; text-align: right; }
+        a { color: rgba(255,255,255,0.6); text-transform: uppercase; text-decoration: none; line-height: 42px; }
+ 
+        h1 {padding: 50px 0; font-weight: 400; text-align: center;}
+         
+        .main {margin: 0 auto; max-width: 500px;}
+        .main .quizsection {margin-bottom: 20px;}
+ </style>
+  
+</head>
+ 
+<body>
+ 
+<h1>Опросник</h1>
+ 
+<section class="main">
+ 
+<form name="quiz" action="javascript:check();" class="quizform">
+ 
+<div class="quizsection">  
+    <h2>Бывает ли у Вас повышенное артериальное давление?</h2>     
+    <div class="answer">
+        <input name="q1" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q1" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q1" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div> 
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Был ли у Вас когда-нибудь инфаркт миокарда?</h2> 
+    <div class="answer">
+        <input name="q2" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q2" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q2" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Беспокоят ли Вас боли в сердце в покое?</h2> 
+    <div class="answer">
+        <input name="q3" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q3" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q3" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Вас беспокоят боли в сердце после тяжелой физической нагрузки и/или морального перенапряжения?</h2> 
+    <div class="answer">
+        <input name="q4" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q4" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q4" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Чувствует ли Вы одышку, слабость, головокружение при обычном уровне физической активности?</h2> 
+    <div class="answer">
+        <input name="q5" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q5" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q5" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечали ли Вы у себя перебои в работе сердца?</h2> 
+    <div class="answer">
+        <input name="q6" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q6" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q6" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечали ли Вы у себя усиленное сердцебиение?</h2> 
+    <div class="answer">
+        <input name="q7" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q7" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q7" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection">  пульса (тахикардию)?</h2> 
+    <div class="answer">
+        <input name="q8" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q8" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q8" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечали ли Вы у себя урежение пульса (брадикардию)?</h2> 
+    <div class="answer">
+        <input name="q9" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q9" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q9" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечали ли Вы у себя «толчок» в груди или «остановку» сердца?</h2> 
+    <div class="answer">
+        <input name="q10" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q10" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q10" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Говорил ли Вам когда-нибудь врач или Вы знаете, что у Вас врожденный порок сердца?</h2> 
+    <div class="answer">
+        <input name="q11" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q11" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q11" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>.Говорил ли Вам когда-нибудь врач или Вы знаете, что у Вас приобретенный порок сердца?</h2> 
+    <div class="answer">
+        <input name="q12" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q12" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q12" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Наблюдаетесь ли Вы у врача-кардиолога по какому-либо заболеванию?</h2> 
+    <div class="answer">
+        <input name="q13" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q13" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q13" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечали ли вы у себя боль, припухлость в области суставов?</h2> 
+    <div class="answer">
+        <input name="q14" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q14" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q14" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Наблюдаетесь ли Вы у врача-ревматолога?</h2> 
+    <div class="answer">
+        <input name="q15" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q15" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q15" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечали ли Вы у себя боли в ногах при ходьбе или в покое?</h2> 
+    <div class="answer">
+        <input name="q16" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q16" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q16" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя чувство тяжести в ногах при ходьбе или в покое?</h2> 
+    <div class="answer">
+        <input name="q17" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q17" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q17" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы отеки на ногах при ходьбе или в покое?</h2> 
+    <div class="answer">
+        <input name="q18" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q18" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q18" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы жажду, учащенное мочеиспускание в течении последних месяцев?</h2> 
+    <div class="answer">
+        <input name="q19" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q19" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q19" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Не отмечалось ли у Вас в анализе крови повышенный уровень сахара?</h2> 
+    <div class="answer">
+        <input name="q20" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q20" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q20" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Страдаете ли Вы сахарным диабетом?</h2> 
+    <div class="answer">
+        <input name="q21" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q21" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q21" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя в течение последних месяцев слабость, повышенную утомляемость?</h2> 
+    <div class="answer">
+        <input name="q22" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q22" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q22" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя спонтанные кровотечения из носа?</h2> 
+    <div class="answer">
+        <input name="q23" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q23" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q23" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя повышенную кровоточивость десен?</h2> 
+    <div class="answer">
+        <input name="q24" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q24" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q24" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя обильные менструации?</h2> 
+    <div class="answer">
+        <input name="q25" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q25" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q25" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Возникала ли у Вас когда-либо внезапно кратковременная слабость или неловкость при движении в одной руке или ноге, или руке и ноге одновременно?</h2> 
+    <div class="answer">
+        <input name="q26" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q26" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q26" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Возникало ли у Вас когда-либо внезапно кратковременное онемение в одной руке, ноге или половине лица?</h2> 
+    <div class="answer">
+        <input name="q27" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q27" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q27" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Возникало ли у Вас когда-либо внезапно резкое головокружение или неустойчивость при ходьбе, в связи с чем Вы не могли идти, были вынуждены лечь в постель, обратиться за посторонней помощью (вызвать бригаду скорой помощи)?</h2> 
+    <div class="answer">
+        <input name="q28" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q28" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q28" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Возникала ли у Вас когда-либо внезапно кратковременная потеря зрения на один глаз?</h2> 
+    <div class="answer">
+        <input name="q29" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q29" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q29" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Курите ли Вы?</h2> 
+    <div class="answer">
+        <input name="q30" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q30" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q30" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Употребляете ли Вы алкоголь?</h2> 
+    <div class="answer">
+        <input name="q31" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q31" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q31" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Считаете ли Вы, что у Вас недостаточный уровень физической активности?</h2> 
+    <div class="answer">
+        <input name="q32" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q32" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q32" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Испытываете ли Вы тошноту после приема пищи?</h2> 
+    <div class="answer">
+        <input name="q33" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q33" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q33" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Испытываете ли Вы тошноту, не связанную с приемом пищи?</h2> 
+    <div class="answer">
+        <input name="q34" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q34" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q34" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя рвоту после приема пищи?</h2> 
+    <div class="answer">
+        <input name="q35" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q35" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q35" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя рвоту, не связанную с приемом пищи?</h2> 
+    <div class="answer">
+        <input name="q36" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q36" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q36" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя тяжесть в животе после приема пищи?</h2> 
+    <div class="answer">
+        <input name="q37" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q37" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q37" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя тяжесть в животе, не связанную с приемом пищи?</h2> 
+    <div class="answer">
+        <input name="q38" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q38" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q38" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя боли в животе, не связанные с приемом пищи?</h2> 
+    <div class="answer">
+        <input name="q39" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q39" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q39" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя боли в животе после физической нагрузки?</h2> 
+    <div class="answer">
+        <input name="q40" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q40" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q40" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя боли в животе после приема пищи?</h2> 
+    <div class="answer">
+        <input name="q41" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q41" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q41" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Для купирования болей в животе приходится ли прибегать к приему аналгетиков?</h2> 
+    <div class="answer">
+        <input name="q42" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q42" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q42" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя диарею, не связанную с приемом пищи?</h2> 
+    <div class="answer">
+        <input name="q43" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q43" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q43" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя запор или метеоризм, не связанные с приемом пищи?</h2> 
+    <div class="answer">
+        <input name="q44" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q44" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q44" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя изжогу, не связанную с приемом пищи?</h2> 
+    <div class="answer">
+        <input name="q45" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q45" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q45" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечали ли Вы у себя снижение массы тела без явной на то причины?</h2> 
+    <div class="answer">
+        <input name="q46" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q46" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q46" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Страдаете ли Вы хроническими заболеваниями желудка или 12-перстной кишки (в т.ч. язвенная болезнь, гастрит, гастродуоденит)?</h2> 
+    <div class="answer">
+        <input name="q47" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q47" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q47" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Страдаете ли Вы хроническими заболеваниями кишечника? (в т.ч. колит, эрозии, язвы, полипы)?</h2> 
+    <div class="answer">
+        <input name="q48" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q48" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q48" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Находились ли Вы на лечении в больнице по поводу острого панкреатита (или обострение хронического)?</h2> 
+    <div class="answer">
+        <input name="q49" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q49" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q49" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Находились ли Вы на лечении в больнице по поводу желчекаменной болезни?</h2> 
+    <div class="answer">
+        <input name="q50" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q50" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q50" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя необъяснимую боли в пояснице?</h2> 
+    <div class="answer">
+        <input name="q51" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q51" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q51" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Испытываете ли Вы необъяснимые затруднения при мочеиспускании?</h2> 
+    <div class="answer">
+        <input name="q52" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q52" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q52" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Отмечаете ли Вы у себя отеки по утрам?</h2> 
+    <div class="answer">
+        <input name="q53" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q53" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q53" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Имеются ли у Вас заболевания почек?</h2> 
+    <div class="answer">
+        <input name="q54" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q54" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q54" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Имеются ли у Вас онкологические заболевания?</h2> 
+    <div class="answer">
+        <input name="q55" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q55" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q55" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Были ли у Вас когда-нибудь операции по поводу заболеваний сосудов?</h2> 
+    <div class="answer">
+        <input name="q56" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q56" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q56" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Были ли у Вас когда-нибудь операции на органах брюшной полости?</h2> 
+    <div class="answer">
+        <input name="q57" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q57" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q57" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Были ли у Вас когда-нибудь травмы органов брюшной полости?</h2> 
+    <div class="answer">
+        <input name="q58" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q58" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q58" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Занимаетесь ли Вы спортом (ходьба, бег трусцой, катание на велосипеде, плавание или др.)?</h2> 
+    <div class="answer">
+        <input name="q59" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q59" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q59" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Можете ли Вы сказать, что уровень вашей физической нагрузки составляет не менее 30 минут в день?</h2> 
+    <div class="answer">
+        <input name="q60" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q60" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q60" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Можете ли Вы сказать, что выпиваете не менее 1,5 л воды в день?</h2> 
+    <div class="answer">
+        <input name="q61" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q61" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q61" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Говорил ли Вам когда-нибудь врач, что у вас заболевание крови (лейкоз, лимфома, тромбоцитопатия и др)?</h2> 
+    <div class="answer">
+        <input name="q62" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q62" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q62" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+<div class="quizsection"> 
+    <h2>Говорил ли Вам когда-нибудь врач, что у Вас заболевание свертывающей системы крови?</h2> 
+    <div class="answer">
+        <input name="q63" value="yes" id="yes" type="radio" checked="checked" /> Да
+    </div> 
+    <div class="answer">
+        <input name="q63" value="no" id="no" type="radio" /> Нет
+    </div> 
+    <div class="answer">
+        <input name="q63" value="unknown" id="unknown" type="radio" /> Затрудняюсь ответить
+    </div>  
+</div>
+ 
+ 
+<input value="Показать результаты" type="submit" /> <input value="Обнулить ответы" type="reset" />
+ 
+</form>
+ 
+</section>
+ 
+<script type="text/javascript">// <![CDATA[
+ 
+   var result;
+    
+   function check()
+ 
+   {
+ 
+      var question;
+      var counter;
+       
+       
+      question = 1;
+      counter = 0;
+       
+       
+      result = "";
+ 
+      var choice;
+       
+      for (question = 1; question <= 63; question++) {
+       
+         var q = document.forms['quiz'].elements['q'+question];
+ 
+            for (var i = 0; i < q.length; i++) {
+               if (q[i].checked) {
+                  choice = q[i].value;
+               }
+            }
+ 
+            if (choice == "yes") {
+               counter += 2;
+            }
+ 
+            if (choice == "unknown") {
+               counter++;
+            }
+ 
+ 
+         }
+ 
+      if (counter < 64) {
+ 
+         result = "healthy";
+ 
+      }
+ 
+      else if (counter < 84) {
+ 
+         result = "predisposed";
+ 
+      }
+ 
+      else if (counter > 83) {
+ 
+         result = "sick";
+ 
+      }
+  
+      // else {
+      //    result = "404";
+      // }
+ 
+      // window.location = result + '.html';
+      switch(result) {
+         case('healthy'): {
+            alert('Нарушения мезентериального кровообращения отсутствуют!');
+            break;
+         }
+         case('predisposed'): {
+            alert('Возможно нарушение мезентериального кровообращения!');
+            break;
+         }
+         case('sick'): {
+            alert('Диагностировано хроническое нарушение мезентериального кровообращения!');
+            break;
+         }
+      }
+ 
+   }
+ 
+// ]]></script>
+ 
+</body>
+</html>
