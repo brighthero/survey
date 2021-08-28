@@ -9,23 +9,30 @@
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
  
         *, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box;}
-        body {background: #2F2556; color: #B9B5C7; font: 14px 'Open Sans', sans-serif;}
+        body {background: #2F2556; color: #B9B5C7; font: 2vh 'Open Sans', sans-serif;}
  
         .top { padding-right: 20px; background: #261F41; text-align: right; }
         a { color: rgba(255,255,255,0.6); text-transform: uppercase; text-decoration: none; line-height: 42px; }
  
         h1 {padding: 50px 0; font-weight: 400; text-align: center;}
-        .answer {font-size: 20px}
+        /* input[type=radio] {font: 24px;} */
+        /* .answer {font-size: 1vh} */
          
         .main {margin: 0 auto; max-width: 500px;}
         .main .quizsection {margin-bottom: 20px;}
+
+        input[type=submit] {border: 1px solid green; color: #fff; background: #0eaa30; padding: 10px 20px; border-radius: 3px;}
+        input[type=submit]:hover {background: green;}
+
+        input[type=reset] {border: 1px solid #f44c0e; color: #fff; background: tomato; padding: 10px 20px; border-radius: 3px;}
+        input[type=reset]:hover {background: #f44c0e;}
  </style>
   
 </head>
  
 <body>
  
-<h1>Опросник</h1>
+<h1>Опросник для выявления хронического нарушения мезентериального кровообращения</h1>
  
 <section class="main">
  
@@ -122,7 +129,8 @@
     </div>  
 </div>
  
-<div class="quizsection">  пульса (тахикардию)?</h2> 
+<div class="quizsection"> 
+    <h2>Отмечали ли Вы у себя учащение пульса (тахикардию)?</h2> 
     <div class="answer">
         <input name="q8" value="yes" id="yes" type="radio" checked="checked" /> Да
     </div> 
@@ -174,7 +182,7 @@
 </div>
  
 <div class="quizsection"> 
-    <h2>.Говорил ли Вам когда-нибудь врач или Вы знаете, что у Вас приобретенный порок сердца?</h2> 
+    <h2>Говорил ли Вам когда-нибудь врач или Вы знаете, что у Вас приобретенный порок сердца?</h2> 
     <div class="answer">
         <input name="q12" value="yes" id="yes" type="radio" checked="checked" /> Да
     </div> 
@@ -851,6 +859,11 @@
  
  
 <input value="Показать результаты" type="submit" /> <input value="Обнулить ответы" type="reset" />
+
+<p> 
+<p> 
+<p> 
+<p> 
  
 </form>
  
@@ -930,7 +943,7 @@
             break;
          }
          case('sick'): {
-            alert('Диагностировано хроническое нарушение мезентериального кровообращения!');
+            alert('Определённо имеет место хроническое нарушение мезентериального кровообращения!');
             break;
          }
       }
